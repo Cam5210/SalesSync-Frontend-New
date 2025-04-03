@@ -37,10 +37,15 @@ function App() {
     }
   }, [])
   
+  // Handle "Add New" button click
+  const handleAddNewClick = () => {
+    alert('Add New button clicked! You can implement your own functionality here.');
+  }
+  
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
-        <Navbar />
+        <Navbar showAddNewButton={true} onAddNewClick={handleAddNewClick} />
         <Routes>
           <Route path="/" element={
             <PageLayout sidebarContent={<HomeSidebar />}>
