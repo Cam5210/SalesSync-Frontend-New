@@ -10,7 +10,7 @@ const ViewComponents = () => {
         <div className="space-y-8 p-4">
             
             <h2 className="text-xl font-bold mb-4 dark:text-white">Video Player</h2>
-            <div className="max-w-2xl mx-auto">
+            <div className="p-4 mx-auto">
                 <VideoPlayer 
                     src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
                     poster="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/BigBuckBunny.jpg"
