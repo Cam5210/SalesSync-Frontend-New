@@ -4,6 +4,7 @@ import TrainingPage from './TrainingPage';
 import MeetingPrepPage from './MeetingPrepPage';
 import CallAssistantPage from './CallAssistantPage';
 import SDRAutomationPage from './SDRAutomationPage';
+import ViewComponents from './ViewComponents';
 
 export {
   HomePage,
@@ -11,5 +12,6 @@ export {
   TrainingPage,
   MeetingPrepPage,
   CallAssistantPage,
-  SDRAutomationPage
+  SDRAutomationPage,
+  ViewComponents
 }; 

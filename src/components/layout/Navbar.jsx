@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import ThemeToggleButton from '../ui/ThemeToggleButton';
 
 const Navbar = () => {
   const location = useLocation();
@@ -7,12 +8,12 @@ const Navbar = () => {
   // Helper function to check if the link is active
   const isActive = (path) => {
     return location.pathname === path ? 
-      "px-3 py-2 rounded bg-gray-700 dark:bg-gray-800 text-white transition-colors" : 
-      "px-3 py-2 rounded hover:bg-gray-700 dark:hover:bg-gray-800 transition-colors";
+      "px-3 py-2 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-colors" : 
+      "px-3 py-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 transition-colors";
   };
   
   return (
-    <nav className="navbar bg-gray-800 dark:bg-gray-900 text-white h-16 w-full flex items-center justify-between px-4 shadow-md">
+    <nav className="navbar bg-white dark:bg-gray-900 text-gray-800 dark:text-white h-16 w-full flex items-center justify-between px-4 shadow-md border-b border-gray-200 dark:border-gray-800">
       <div className="flex items-center">
         <Link to="/" className="text-xl font-bold">My App</Link>
       </div>
@@ -32,7 +33,11 @@ const Navbar = () => {
         <Link to="/sdr-automation" className={isActive('/sdr-automation')}>
           SDR Automation
         </Link>
-        <div className="w-8 h-8 rounded-full bg-gray-500 dark:bg-gray-600 flex items-center justify-center">
+        <Link to="/view-components" className={isActive('/view-components')}>
+          View Components
+        </Link>
+        <ThemeToggleButton />
+        <div className="w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center">
           <span className="text-sm">👤</span>
         </div>
       </div>
