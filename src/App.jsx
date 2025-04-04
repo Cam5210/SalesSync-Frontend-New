@@ -5,7 +5,11 @@ import { Navbar, PageLayout } from './components/layout'
 import {
   HomeSidebar,
   ProductsSidebar,
-  TrainingSidebar
+  TrainingSidebar,
+  MeetingPrepSidebar,
+  CallAssistantSidebar,
+  SDRAutomationSidebar,
+  ViewComponentsSidebar
 } from './components/sidebars'
 import {
   HomePage,
@@ -63,22 +67,22 @@ function App() {
             </PageLayout>
           } />
           <Route path="/meeting-prep" element={
-            <PageLayout sidebarContent={<HomeSidebar />}>
+            <PageLayout sidebarContent={<MeetingPrepSidebar />}>
               <MeetingPrepPage />
             </PageLayout>
           } />
           <Route path="/call-assistant" element={
-            <PageLayout sidebarContent={<HomeSidebar />}>
+            <PageLayout sidebarContent={<CallAssistantSidebar />}>
               <CallAssistantPage />
             </PageLayout>
           } />
           <Route path="/sdr-automation" element={
-            <PageLayout sidebarContent={<HomeSidebar />}>
+            <PageLayout sidebarContent={<SDRAutomationSidebar />}>
               <SDRAutomationPage />
             </PageLayout>
           } />
           <Route path="/view-components" element={
-            <PageLayout sidebarContent={<HomeSidebar />}>
+            <PageLayout sidebarContent={<ViewComponentsSidebar />}>
               <ViewComponents />
             </PageLayout>
           } />

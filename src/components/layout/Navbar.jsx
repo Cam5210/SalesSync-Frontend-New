@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ThemeToggleButton from '../ui/ThemeToggleButton';
 
-const Navbar = () => {
+const Navbar = ({ showAddNewButton, onAddNewClick }) => {
   const location = useLocation();
   
   // Helper function to check if the link is active
@@ -18,6 +18,14 @@ const Navbar = () => {
         <Link to="/" className="text-xl font-bold">My App</Link>
       </div>
       <div className="flex items-center space-x-4">
+        {showAddNewButton && (
+          <button 
+            onClick={onAddNewClick}
+            className="px-3 py-2 rounded bg-blue-500 hover:bg-blue-600 text-white transition-colors"
+          >
+            Add New
+          </button>
+        )}
         <Link to="/products" className={isActive('/products')}>
           Products
         </Link>
