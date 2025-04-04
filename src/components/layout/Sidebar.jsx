@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+const Sidebar = ({ isOpen, toggleSidebar, showAddNewButton = false, onAddNewClick }) => {
   return (
     <aside className={`sidebar bg-gray-100 dark:bg-gray-800 shadow-md transition-all duration-300 ${
       isOpen ? 'w-64' : 'w-0 md:w-16'
@@ -24,6 +24,20 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         {isOpen ? (
           <div className="flex-1 overflow-y-auto">
             <h2 className="text-lg font-semibold mb-4 dark:text-white">Navigation</h2>
+            
+            {/* Add New button */}
+            {showAddNewButton && (
+              <button
+                onClick={onAddNewClick}
+                className="flex items-center w-full px-2 py-2 mb-2 text-left rounded bg-blue-500 hover:bg-blue-600 text-white transition-colors"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 3a1 1 0 00-1 1v5H4a1 1 0 100 2h5v5a1 1 0 102 0v-5h5a1 1 0 100-2h-5V4a1 1 0 00-1-1z" clipRule="evenodd" />
+                </svg>
+                Add New
+              </button>
+            )}
+            
             <ul className="space-y-2">
               <li>
                 <a href="#" className="block p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-gray-200 transition-colors">

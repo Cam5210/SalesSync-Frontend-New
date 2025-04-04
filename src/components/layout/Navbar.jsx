@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import ThemeToggleButton from '../ui/ThemeToggleButton';
 
-const Navbar = ({ showAddNewButton = false, onAddNewClick }) => {
+const Navbar = () => {
   const location = useLocation();
   
   // Helper function to check if the link is active
@@ -37,17 +37,6 @@ const Navbar = ({ showAddNewButton = false, onAddNewClick }) => {
           View Components
         </Link>
         <ThemeToggleButton />
-        {showAddNewButton && (
-          <button
-            onClick={onAddNewClick}
-            className="flex items-center justify-center px-3 py-1.5 bg-blue-500 hover:bg-blue-600 text-white rounded-md text-sm font-medium transition-colors"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M10 3a1 1 0 00-1 1v5H4a1 1 0 100 2h5v5a1 1 0 102 0v-5h5a1 1 0 100-2h-5V4a1 1 0 00-1-1z" clipRule="evenodd" />
-            </svg>
-            Add New
-          </button>
-        )}
         <div className="w-8 h-8 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center">
           <span className="text-sm">👤</span>
         </div>
